@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import Auth from './components/Auth/index';
+import styled from 'styled-components';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Container = styled.div`
+  overflow: hidden;
+  position: relative;
+  width: 90rem;
+  height: 550px;
+  margin: 8rem auto 100px;
+  background: #fff;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+`;
+
+class App extends React.Component {
+  render() {
+    return (
+      <Container>
+        <Auth />
+      </Container>
+    );
+  }
 }
-
 export default App;
